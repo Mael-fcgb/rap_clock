@@ -9,6 +9,6 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- section.img{
-    width: 1%;
+ .img{
+    width: 10%;
  }
