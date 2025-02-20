@@ -4,12 +4,14 @@
     <%= artist.pseudonym %>
   </p>
 
-  <p>
+  <section >
     <strong>Image:</strong>
-    <%= artist.image %>
-  </p>
+    <div class="img">
+      <%= image_tag artist.image %>
+    </div>
+  </section>
 
-  <p>
+  <p >
     <strong>Description:</strong>
     <%= artist.description %>
   </p>
