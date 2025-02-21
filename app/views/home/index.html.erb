@@ -1,0 +1,25 @@
+<h1>Home</h1>
+
+<%= link_to "Artistes", artists_path %>
+<%= link_to "Projects", projects_path %>
+
+<div id="projects">
+  <% @projects_by_date.each do |date, projects| %>
+    <h2>
+      <% if date == Date.today %>
+        Aujourd'hui
+      <% elsif date == Date.tomorrow %>
+        Demain
+      <% else %>
+        <%= date.strftime("%d %B %Y") %> 
+      <% end %>
+    </h2>
+
+    <% projects.each do |project| %>
+      <%= render project %>
+      <p>
+        <%= link_to "Show this project", project %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
