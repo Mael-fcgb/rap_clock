@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @projects = Project.all  # This line needs to be added
+    @projects = Project.all
   end
   def show
   end
