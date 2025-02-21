@@ -1,16 +1,15 @@
 <div id="<%= dom_id artist %>">
   <p>
-    <strong>Pseudonym:</strong>
-    <%= artist.pseudonym %>
+    <strong>Pseudo:</strong>
+    <%= artist.pseudo %>
   </p>
 
-  <section >
+  <p>
     <strong>Image:</strong>
+    <%= artist.image %>
+  </p>
 
-      <%= image_tag artist.image, class: "img" %>
-  </section>
-
-  <p >
+  <p>
     <strong>Description:</strong>
     <%= artist.description %>
   </p>

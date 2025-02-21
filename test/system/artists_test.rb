@@ -16,7 +16,7 @@ class ArtistsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @artist.description
     fill_in "Image", with: @artist.image
-    fill_in "Pseudonym", with: @artist.pseudonym
+    fill_in "Pseudo", with: @artist.pseudo
     click_on "Create Artist"
 
     assert_text "Artist was successfully created"
@@ -29,7 +29,7 @@ class ArtistsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @artist.description
     fill_in "Image", with: @artist.image
-    fill_in "Pseudonym", with: @artist.pseudonym
+    fill_in "Pseudo", with: @artist.pseudo
     click_on "Update Artist"
 
     assert_text "Artist was successfully updated"
