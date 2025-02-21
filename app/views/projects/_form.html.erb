@@ -8,6 +8,11 @@
     <%= f.input :cover %>
     <%= f.input :date %>
     <%= f.input :tracklist %>
+    <%= f.input :artist_ids, 
+                as: :select, 
+                collection: Artist.all.collect { |artist| [artist.pseudo, artist.id] }, 
+                multiple: true, 
+                prompt: "Sélectionner des artistes" %>
   </div>
 
   <div class="form-actions">

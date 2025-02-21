@@ -13,10 +13,12 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @artists = Artist.all
   end
 
   # GET /projects/1/edit
   def edit
+    @artists = Artist.all
   end
 
   # POST /projects or /projects.json
@@ -65,6 +67,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.expect(project: [ :name, :cover, :date, :tracklist ])
+      params.expect(project: [ :name, :cover, :date, :tracklist, artist_ids: [] ])
     end
 end

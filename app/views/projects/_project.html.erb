@@ -6,7 +6,7 @@
 
   <p>
     <strong>Cover:</strong>
-    <%= project.cover %>
+    <%= image_tag project.cover %>
   </p>
 
   <p>
@@ -19,4 +19,16 @@
     <%= project.tracklist %>
   </p>
 
+  <p>
+    <strong>Artists:</strong>
+    <% if project.artists.any? %>
+      <ul>
+        <% project.artists.each do |artist| %>
+          <li><%= artist.pseudo %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>Pas d'artistes.</p>
+    <% end %>
+  </p>
 </div>
